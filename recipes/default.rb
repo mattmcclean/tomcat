@@ -77,5 +77,5 @@ template "/etc/tomcat6/logging.properties" do
   owner "root"
   group "root"
   mode "0644"
-  notifies :restart, "service[tomcat]"
+  notifies :restart, resources(:service => "tomcat")
 end
